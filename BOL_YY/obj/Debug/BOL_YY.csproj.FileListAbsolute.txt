@@ -1,0 +1,4 @@
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BOL_YY\obj\Debug\BOL_YY.csprojResolveAssemblyReference.cache
+D:\SIMS_YY\BOL_YY\obj\Debug\BOL_YY.csprojResolveAssemblyReference.cache
+D:\SIMS_YY\BOL_YY\obj\Debug\BOL_YY.dll
+D:\SIMS_YY\BOL_YY\obj\Debug\BOL_YY.pdb

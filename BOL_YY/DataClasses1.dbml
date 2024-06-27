@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="YCUSIMS" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-S8T8MM9\ROM;Initial Catalog=YCUSIMS;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="YCUSIMSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_AcadmicCalander" Member="TBL_AcadmicCalander1s">
+    <Type Name="TBL_AcadmicCalander1">
+      <Column Name="Acadminc_Activities" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="[StartDateinG.C]" Member="StartDateinG_C" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[LastDateinG.C]" Member="LastDateinG_C" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[AcadmicYear(E.C)]" Member="AcadmicYear_E_C_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_AcadmicDismissalStudent" Member="TBL_AcadmicDismissalStudents">
+    <Type Name="TBL_AcadmicDismissalStudent">
+      <Column Name="StudID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Midle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="College_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Department_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Acadmic_Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="regdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Student_status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_college_TBL_AcadmicDismissalStudent" Member="TBL_college" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_AcadmicDismissalStudent" Member="TBL_department" ThisKey="Department_Code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+      <Association Name="TBL_FreshStudent_TBL_AcadmicDismissalStudent" Member="TBL_FreshStudent" ThisKey="StudID" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_AddCourse" Member="TBL_AddCourses">
+    <Type Name="TBL_AddCourse">
+      <Column Name="[IDNo.]" Member="IDNo_" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="first_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="College_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dept_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Acadmic_Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Course_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Course_name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Credit_hour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reg_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_college_TBL_AddCourse" Member="TBL_college" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" />
+      <Association Name="TBL_Course_TBL_AddCourse" Member="TBL_Course" ThisKey="Course_Code" OtherKey="Course_code" Type="TBL_Course" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_AddCourse" Member="TBL_department" ThisKey="Dept_Code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+      <Association Name="TBL_FreshStudent_TBL_AddCourse" Member="TBL_FreshStudent" ThisKey="IDNo_" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_college" Member="TBL_colleges">
+    <Type Name="TBL_college">
+      <Column Name="College_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="College_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_college_TBL_AcadmicDismissalStudent" Member="TBL_AcadmicDismissalStudents" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_AcadmicDismissalStudent" />
+      <Association Name="TBL_college_TBL_AddCourse" Member="TBL_AddCourses" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_AddCourse" />
+      <Association Name="TBL_college_TBL_Course" Member="TBL_Courses" ThisKey="College_Code" OtherKey="College_code" Type="TBL_Course" />
+      <Association Name="TBL_college_TBL_department" Member="TBL_departments" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_department" />
+      <Association Name="TBL_college_TBL_DropCourse" Member="TBL_DropCourses" ThisKey="College_Code" OtherKey="College_code" Type="TBL_DropCourse" />
+      <Association Name="TBL_college_TBL_FreshStudent" Member="TBL_FreshStudents" ThisKey="College_Code" OtherKey="college" Type="TBL_FreshStudent" />
+      <Association Name="TBL_college_TBL_RegisterStudent" Member="TBL_RegisterStudents" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_RegisterStudent" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_Course" Member="TBL_Courses">
+    <Type Name="TBL_Course">
+      <Column Name="College_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Department_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Course_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Credit_hour" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Semister" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Association Name="TBL_Course_TBL_AddCourse" Member="TBL_AddCourses" ThisKey="Course_code" OtherKey="Course_Code" Type="TBL_AddCourse" />
+      <Association Name="TBL_Course_TBL_DropCourse" Member="TBL_DropCourses" ThisKey="Course_code" OtherKey="Course_Code" Type="TBL_DropCourse" />
+      <Association Name="TBL_Course_TBL_PrerequestCourse" Member="TBL_PrerequestCourses" ThisKey="Course_code" OtherKey="Prerequest_Course" Type="TBL_PrerequestCourse" />
+      <Association Name="TBL_Course_TBL_studentGrade" Member="TBL_studentGrades" ThisKey="Course_code" OtherKey="Course_Code" Type="TBL_studentGrade" />
+      <Association Name="TBL_college_TBL_Course" Member="TBL_college" ThisKey="College_code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="TBL_department_TBL_Course" Member="TBL_department" ThisKey="Department_code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_department" Member="TBL_departments">
+    <Type Name="TBL_department">
+      <Column Name="College_Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Department_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Department_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_department_TBL_AcadmicDismissalStudent" Member="TBL_AcadmicDismissalStudents" ThisKey="Department_Code" OtherKey="Department_Code" Type="TBL_AcadmicDismissalStudent" />
+      <Association Name="TBL_department_TBL_AddCourse" Member="TBL_AddCourses" ThisKey="Department_Code" OtherKey="Dept_Code" Type="TBL_AddCourse" />
+      <Association Name="TBL_department_TBL_Course" Member="TBL_Courses" ThisKey="Department_Code" OtherKey="Department_code" Type="TBL_Course" />
+      <Association Name="TBL_department_TBL_DropCourse" Member="TBL_DropCourses" ThisKey="Department_Code" OtherKey="Dept_Code" Type="TBL_DropCourse" />
+      <Association Name="TBL_department_TBL_FreshStudent" Member="TBL_FreshStudents" ThisKey="Department_Code" OtherKey="department" Type="TBL_FreshStudent" />
+      <Association Name="TBL_department_TBL_GeneratedID" Member="TBL_GeneratedIDs" ThisKey="Department_Code" OtherKey="department" Type="TBL_GeneratedID" />
+      <Association Name="TBL_department_TBL_PrerequestCourse" Member="TBL_PrerequestCourses" ThisKey="Department_Code" OtherKey="dept_code" Type="TBL_PrerequestCourse" />
+      <Association Name="TBL_department_TBL_RegisterStudent" Member="TBL_RegisterStudents" ThisKey="Department_Code" OtherKey="Department_Code" Type="TBL_RegisterStudent" />
+      <Association Name="TBL_department_TBL_studentGrade" Member="TBL_studentGrades" ThisKey="Department_Code" OtherKey="Department" Type="TBL_studentGrade" />
+      <Association Name="TBL_college_TBL_department" Member="TBL_college" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_DropCourse" Member="TBL_DropCourses">
+    <Type Name="TBL_DropCourse">
+      <Column Name="[IDNo.]" Member="IDNo_" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="College_code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Dept_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Acadmic_year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Course_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Course_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Credit_hour" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Reg_Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_college_TBL_DropCourse" Member="TBL_college" ThisKey="College_code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" />
+      <Association Name="TBL_Course_TBL_DropCourse" Member="TBL_Course" ThisKey="Course_Code" OtherKey="Course_code" Type="TBL_Course" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_DropCourse" Member="TBL_department" ThisKey="Dept_Code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+      <Association Name="TBL_FreshStudent_TBL_DropCourse" Member="TBL_FreshStudent" ThisKey="IDNo_" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_FreshStudent" Member="TBL_FreshStudents">
+    <Type Name="TBL_FreshStudent">
+      <Column Name="Stud_ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="first_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="middle_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="last_name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="college" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="natinality" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="region" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="zone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Acadmic_year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Class_year" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Semister" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="reg_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="TBL_FreshStudent_TBL_AcadmicDismissalStudent" Member="TBL_AcadmicDismissalStudents" ThisKey="Stud_ID" OtherKey="StudID" Type="TBL_AcadmicDismissalStudent" />
+      <Association Name="TBL_FreshStudent_TBL_AddCourse" Member="TBL_AddCourses" ThisKey="Stud_ID" OtherKey="IDNo_" Type="TBL_AddCourse" />
+      <Association Name="TBL_FreshStudent_TBL_DropCourse" Member="TBL_DropCourses" ThisKey="Stud_ID" OtherKey="IDNo_" Type="TBL_DropCourse" />
+      <Association Name="TBL_FreshStudent_TBL_GeneratedID" Member="TBL_GeneratedIDs" ThisKey="Stud_ID" OtherKey="StudID" Type="TBL_GeneratedID" />
+      <Association Name="TBL_FreshStudent_TBL_GradeReport" Member="TBL_GradeReports" ThisKey="Stud_ID" OtherKey="StudentID" Type="TBL_GradeReport" />
+      <Association Name="TBL_FreshStudent_TBL_RegisterStudent" Member="TBL_RegisterStudents" ThisKey="Stud_ID" OtherKey="StudID" Type="TBL_RegisterStudent" />
+      <Association Name="TBL_FreshStudent_TBL_studentGrade" Member="TBL_studentGrades" ThisKey="Stud_ID" OtherKey="StudentID" Type="TBL_studentGrade" />
+      <Association Name="TBL_college_TBL_FreshStudent" Member="TBL_college" ThisKey="college" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_FreshStudent" Member="TBL_department" ThisKey="department" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_GeneratedID" Member="TBL_GeneratedIDs">
+    <Type Name="TBL_GeneratedID">
+      <Column Name="StudID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudentImg" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="TBL_department_TBL_GeneratedID" Member="TBL_department" ThisKey="department" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="TBL_FreshStudent_TBL_GeneratedID" Member="TBL_FreshStudent" ThisKey="StudID" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_GradeReport" Member="TBL_GradeReports">
+    <Type Name="TBL_GradeReport">
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCredit" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalPoint" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="SGPA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CGPA" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AcadmicStatus" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_FreshStudent_TBL_GradeReport" Member="TBL_FreshStudent" ThisKey="StudentID" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_PrerequestCourse" Member="TBL_PrerequestCourses">
+    <Type Name="TBL_PrerequestCourse">
+      <Column Name="dept_code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Prerequest_Course" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_department_TBL_PrerequestCourse" Member="TBL_department" ThisKey="dept_code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="TBL_Course_TBL_PrerequestCourse" Member="TBL_Course" ThisKey="Prerequest_Course" OtherKey="Course_code" Type="TBL_Course" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_RegisterStudent" Member="TBL_RegisterStudents">
+    <Type Name="TBL_RegisterStudent">
+      <Column Name="StudID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Midle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="College_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Department_Code" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Semister" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Region" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Zone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Acadmic_Year" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="regdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Student_status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="TBL_college_TBL_RegisterStudent" Member="TBL_college" ThisKey="College_Code" OtherKey="College_Code" Type="TBL_college" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_RegisterStudent" Member="TBL_department" ThisKey="Department_Code" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+      <Association Name="TBL_FreshStudent_TBL_RegisterStudent" Member="TBL_FreshStudent" ThisKey="StudID" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_studentGrade" Member="TBL_studentGrades">
+    <Type Name="TBL_studentGrade">
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Course_Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Grade" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Semister" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Instrucor_UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_Course_TBL_studentGrade" Member="TBL_Course" ThisKey="Course_Code" OtherKey="Course_code" Type="TBL_Course" IsForeignKey="true" />
+      <Association Name="TBL_department_TBL_studentGrade" Member="TBL_department" ThisKey="Department" OtherKey="Department_Code" Type="TBL_department" IsForeignKey="true" />
+      <Association Name="TBL_FreshStudent_TBL_studentGrade" Member="TBL_FreshStudent" ThisKey="StudentID" OtherKey="Stud_ID" Type="TBL_FreshStudent" IsForeignKey="true" />
+      <Association Name="TBL_User_TBL_studentGrade" Member="TBL_User" ThisKey="Instrucor_UserName" OtherKey="UserName" Type="TBL_User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_User" Member="TBL_Users">
+    <Type Name="TBL_User">
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="First_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Middle_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Last_Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Account_type" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Sex" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="College" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Department" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_User_TBL_studentGrade" Member="TBL_studentGrades" ThisKey="UserName" OtherKey="Instrucor_UserName" Type="TBL_studentGrade" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblresetpasswordRequest" Member="tblresetpasswordRequests">
+    <Type Name="tblresetpasswordRequest">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ResetRequestDatetime" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AcadmicCalander" Method="AcadmicCalander">
+    <Parameter Name="aactivites" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="startdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="lastdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ayear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AcadmicDismssalStudent" Method="AcadmicDismssalStudent">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="studentstatus" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddColleges" Method="AddColleges">
+    <Parameter Name="College_Code" Parameter="college_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="College_Name" Parameter="college_Name" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.Addcourse" Method="Addcourse">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ccode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="cname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="credithour" Type="System.Int32" DbType="Int" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.adddepartment" Method="adddepartment">
+    <Parameter Name="College_Code" Parameter="college_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Department_Code" Parameter="department_Code" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Department_name" Parameter="department_name" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.addfreshstudent" Method="addfreshstudent">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="classyear" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.createAccount" Method="createAccount">
+    <Parameter Name="userid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="AType" Parameter="aType" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="pass" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deleeduplicatestudent" Method="deleeduplicatestudent">
+    <Parameter Name="Regno" Parameter="regno" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteDuplicateGrade" Method="DeleteDuplicateGrade">
+    <Parameter Name="id" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Ccode" Parameter="ccode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="semi" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.deleteprerequestgrade" Method="deleteprerequestgrade">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="coursecode" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DropCourse" Method="DropCourse">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ccode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="cname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="credithour" Type="System.Int32" DbType="Int" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.PrerequestcourseReg" Method="PrerequestcourseReg">
+    <Parameter Name="deptcode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="coucode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="prequestCourse" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegisterBuilding" Method="RegisterBuilding">
+    <Parameter Name="campus" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="bname" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="noofdorm" Type="System.Int32" DbType="Int" />
+    <Parameter Name="studentsindorm" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.registercourse" Method="registercourse">
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ccode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="cname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="credithour" Type="System.Int32" DbType="Int" />
+    <Parameter Name="year" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegisterFreshStudent" Method="RegisterFreshStudent">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="classyear" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.registerGeneratedID" Method="registerGeneratedID">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="img" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegisterGradeReport" Method="RegisterGradeReport">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="credit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="totalpoint" Type="System.Double" DbType="Float" />
+    <Parameter Name="sgpa" Type="System.Double" DbType="Float" />
+    <Parameter Name="cgpa" Type="System.Double" DbType="Float" />
+    <Parameter Name="acadmicstatus" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RegisterStudent" Method="RegisterStudent">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="fname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="mname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="college" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dept" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sex" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="nation" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="region" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="zone" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Acadmicyear" Parameter="acadmicyear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="regdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="studentstatus" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateAcadmiccalander" Method="updateAcadmiccalander">
+    <Parameter Name="aactivites" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="startdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="lastdate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ayear" Type="System.Int32" DbType="Int" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCollege" Method="UpdateCollege">
+    <Parameter Name="collegecode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="collegename" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatecourse" Method="updatecourse">
+    <Parameter Name="cname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="credithour" Type="System.Int32" DbType="Int" />
+    <Parameter Name="year" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="ccode" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatedepartment" Method="updatedepartment">
+    <Parameter Name="deptname" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="deptcode" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateFreshStudent" Method="updateFreshStudent">
+    <Parameter Name="collegecode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="deptcode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateGradeReport" Method="updateGradeReport">
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="year" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="semister" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="credit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="totalpoint" Type="System.Double" DbType="Float" />
+    <Parameter Name="sgpa" Type="System.Double" DbType="Float" />
+    <Parameter Name="cgpa" Type="System.Double" DbType="Float" />
+    <Parameter Name="acadmicstatus" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatepassword" Method="updatepassword">
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="username" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateTeacherUsername" Method="updateTeacherUsername">
+    <Parameter Name="teachername" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="studid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="deptid" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="coursecode" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

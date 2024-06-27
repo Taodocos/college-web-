@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Site111.Master" AutoEventWireup="true" CodeBehind="try1.master.cs" Inherits="SIMS_YY.try.try1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<style type="text/css">
+        .auto-style3 {
+            width: 233px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <table align="center" class="auto-style1">
+        <tr>
+            <td class="auto-style3">
+                <br />
+                <ul>
+       
+                    
+                    <li><a href="approve%20rep.aspx">approve rep.aspx</a></li>
+                    <!--<li><a href="view.aspx">view.aspx</a></li>-->
+                </ul>
+                
+                </td>
+            <td><asp:ContentPlaceHolder ID="MainContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>&nbsp;</td>
+        </tr>
+    </table>
+    </asp:Content>

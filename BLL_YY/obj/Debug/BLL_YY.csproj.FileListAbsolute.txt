@@ -1,0 +1,11 @@
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\bin\BLL_YY.dll.config
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\bin\BLL_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\bin\BLL_YY.pdb
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\bin\BOL_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\bin\BOL_YY.pdb
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.csprojResolveAssemblyReference.cache
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.pdb
+D:\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.csprojResolveAssemblyReference.cache
+D:\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.dll
+D:\SIMS_YY\BLL_YY\obj\Debug\BLL_YY.pdb

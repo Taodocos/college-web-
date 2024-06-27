@@ -1,0 +1,13 @@
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.csprojResolveAssemblyReference.cache
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\SIMS_YY.dll.config
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\SIMS_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\SIMS_YY.pdb
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\BLL_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\BOL_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\BLL_YY.pdb
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\bin\BOL_YY.pdb
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.dll
+C:\Users\user\documents\visual studio 2013\Projects\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.pdb
+D:\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.csprojResolveAssemblyReference.cache
+D:\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.dll
+D:\SIMS_YY\SIMS_YY\obj\Debug\SIMS_YY.pdb
